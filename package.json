@@ -1,0 +1,43 @@
+{
+  "name": "testproject",
+  "version": "1.0.0",
+  "description": "Mobile App Design and Implementation Test Project ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sewar-x/TestProject.git"
+  },
+  "keywords": [
+    "testproject"
+  ],
+  "author": "Sewar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sewar-x/TestProject/issues"
+  },
+  "homepage": "https://github.com/Sewar-x/TestProject#readme",
+  "dependencies": {
+    "vue": "^2.5.13"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^0.28.8",
+    "file-loader": "^1.1.6",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "vue-loader": "^14.2.4",
+    "vue-style-loader": "^3.0.3",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.3"
+  }
+}
