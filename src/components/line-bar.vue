@@ -9,15 +9,21 @@
         :key="index + grade"
         @mouseover="touchLineBar"
         @mouseout="unTouchLineBar"
+        :class="[loaded ? `line-container${index} show-line ` : '']"
       >
         <span
-          :class="`line line${index}`"
+          :class="`line`"
           :style="`height:${
             grade < quesGrade ? 0.87 : (283 * grade) / 10000
           }rem;backgroundColor:${face(grade).color};`"
         >
           <p>{{ grade > quesGrade ? grade : "" }}</p>
-          <img class="face" :src="face(grade).header" alt="" />
+          <img
+            class="face"
+            :class="[loaded ? 'loadedAni' : '']"
+            :src="face(grade).header"
+            alt=""
+          />
         </span>
         <span class="date" :class="{ today: today === index }">
           {{ indexToDate[index] }}
@@ -45,7 +51,14 @@ export default {
       animateShow: false,
       today: (new Date().getDay() + 1) % 7,
       lineStyle: "",
+      loaded: false,
     };
+  },
+  mounted() {
+    let that = this;
+    setTimeout(() => {
+      that.loaded = true;
+    }, 500);
   },
   methods: {
     face: function (grade) {
@@ -145,6 +158,7 @@ export default {
       align-items: flex-end;
       flex-direction: column;
       justify-content: flex-end;
+      transform: scale(0);
       &:hover {
         .line {
           transition: all 0.1s ease-in-out;
@@ -179,31 +193,13 @@ export default {
           margin-top: 0.12rem;
         }
         .face {
+          transform: scale(0);
           margin: 0.04rem;
           transition: all 0.5s ease;
         }
-      }
-      .line0 {
-        transition-delay: 0.5s;
-      }
-      .line1 {
-        transition-delay: 1s;
-      }
-      .line2 {
-        transition-delay: 1.5s;
-      }
-      .line3 {
-        transition-delay: 2s;
-      }
-
-      .line4 {
-        transition-delay: 2.5s;
-      }
-      .line5 {
-        transition-delay: 3s;
-      }
-      .line6 {
-        transition-delay: 3.5s;
+        .loadedAni {
+          transform: scale(1);
+        }
       }
       .date {
         font-family: PingFang HK;
@@ -223,6 +219,52 @@ export default {
         background-color: #2d2f33;
         color: #ffffff;
         border-radius: 8px;
+      }
+    }
+    .show-line {
+      transform: scale(1);
+    }
+    .line-container0 {
+      transition-delay: 0.1s;
+      .face {
+        transition-delay: 0.11s;
+      }
+    }
+    .line-container1 {
+      transition-delay: 0.2s;
+      .face {
+        transition-delay: 0.22s;
+      }
+    }
+    .line-container2 {
+      transition-delay: 0.3s;
+      .face {
+        transition-delay: 0.33s;
+      }
+    }
+    .line-container3 {
+      transition-delay: 0.4s;
+      .face {
+        transition-delay: 0.44s;
+      }
+    }
+
+    .line-container4 {
+      transition-delay: 0.5s;
+      .face {
+        transition-delay: 0.55s;
+      }
+    }
+    .line-container5 {
+      transition-delay: 0.66s;
+      .face {
+        transition-delay: 0.66s;
+      }
+    }
+    .line-container6 {
+      transition-delay: 0.7s;
+      .face {
+        transition-delay: 0.77s;
       }
     }
   }
