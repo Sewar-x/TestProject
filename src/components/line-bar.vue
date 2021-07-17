@@ -9,13 +9,13 @@
         :key="index + grade"
         @mouseover="touchLineBar"
         @mouseout="unTouchLineBar"
-        :class="[loaded ? `line-container${index} show-line ` : '']"
+        :class="[loaded ? `line-container${index} show-line` : '']"
       >
         <span
           :class="`line`"
           :style="`height:${
-            grade < quesGrade ? 0.87 : (283 * grade) / 10000
-          }rem;backgroundColor:${face(grade).color};`"
+            loaded ? (grade < quesGrade ? 0.87 : (283 * grade) / 10000) : 0
+          }rem;backgroundColor:${face(grade).color}; transition-delay:${index*0.11}s;`"
         >
           <p>{{ grade > quesGrade ? grade : "" }}</p>
           <img
@@ -194,8 +194,8 @@ export default {
         }
         .face {
           transform: scale(0);
+          transition: transform 0.5s ease-in-out 0.5s;
           margin: 0.04rem;
-          transition: all 0.5s ease;
         }
         .loadedAni {
           transform: scale(1);
@@ -227,44 +227,44 @@ export default {
     .line-container0 {
       transition-delay: 0.1s;
       .face {
-        transition-delay: 0.11s;
+        transition-delay: 0.21s;
       }
     }
     .line-container1 {
       transition-delay: 0.2s;
       .face {
-        transition-delay: 0.22s;
+        transition-delay: 0.32s;
       }
     }
     .line-container2 {
       transition-delay: 0.3s;
       .face {
-        transition-delay: 0.33s;
+        transition-delay: 0.43s;
       }
     }
     .line-container3 {
       transition-delay: 0.4s;
       .face {
-        transition-delay: 0.44s;
+        transition-delay: 0.54s;
       }
     }
 
     .line-container4 {
       transition-delay: 0.5s;
       .face {
-        transition-delay: 0.55s;
+        transition-delay: 0.65s;
       }
     }
     .line-container5 {
       transition-delay: 0.66s;
       .face {
-        transition-delay: 0.66s;
+        transition-delay: 0.76s;
       }
     }
     .line-container6 {
       transition-delay: 0.7s;
       .face {
-        transition-delay: 0.77s;
+        transition-delay: 0.87s;
       }
     }
   }
