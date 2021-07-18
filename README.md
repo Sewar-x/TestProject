@@ -36,15 +36,24 @@ npm i -g cnpm --registry=https://registry.npm.taobao.org
 cnpm run dev
 ```
 
+## Q&A
 
-## Technology stack
+* Q：What are the technologies/framework you will use? 
+  * A：The project uses Vue2.x + WebPack3.x constructed single page applications
+* Q：Why do you select those technologies?
+  * A：Vue.js is a gradual framework for building user interfaces，Use Vue.js to quickly build applications, and you can realize rapid development of small projects
+* Q：How do you provide the updated version quickly to the customer？
+  * A：use `cnpm run build` to build project. After building a project, you can immediately release the update version immediately after the static resource is up to the web service nginx.
 
-* The project uses Vue2.x + WebPack3.x constructed single page applications
+
+
+## 3rd party library
+
 * Dependency used in the project：
   * `vue`：
     * Vue 是一套用于构建用户界面的 渐进式框架 。
     * 与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。
-    * 使用 Vue 可以快速构建应用
+    * 使用 Vue 可以快速构建应用，并可以实现小项目的快速开发
   * `babel-core`: 
     * 作用：把 js 代码分析成 ast ，方便各个插件分析语法进行相应的处理。
   * `babel-loader`: 
