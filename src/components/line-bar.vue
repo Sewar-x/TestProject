@@ -194,7 +194,7 @@ export default {
         }
         .face {
           transform: scale(0);
-          transition: transform 0.5s ease-in-out 0.5s;
+          transition: transform 0.5s ease-in-out .75s;
           margin: 0.04rem;
         }
         .loadedAni {

@@ -1,7 +1,43 @@
 # Mobile App Design and Implementation Test Project
 ## Introduction
 
-### Technology stack
+* Project link:  [`http://www.sewar.top/sewar/index.html`](http://www.sewar.top/sewar/index.html)
+
+* Home Page only Show a button，Click the button to enter the Exponents page
+
+  ![image-20210718120337228](./src/images/homePage.png)
+
+* Exponents Page:
+
+  ![image-20210718120526887](./src/images/exponents.png)
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+```
+
+* Recommended domestic Taobao mirror:
+  (Using npm: err! Failed at the node-script @ xxx postInstall Script)
+
+``` bash
+# install cnpm
+npm i -g cnpm --registry=https://registry.npm.taobao.org
+
+# serve with hot reload at localhost:8080
+cnpm run dev
+```
+
+
+## Technology stack
 
 * The project uses Vue2.x + WebPack3.x constructed single page applications
 * Dependency used in the project：

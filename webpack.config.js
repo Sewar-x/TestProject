@@ -1,6 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: ['babel-polyfill', './src/main.js'],
   devtool: '#eval-source-map',
@@ -87,5 +87,8 @@ if (process.env.NODE_ENV === 'production') {
       }
     }),
     new webpack.optimize.UglifyJsPlugin(),
+    new HtmlWebpackPlugin({
+      template: './index.html'
+    })
   ])
 }
