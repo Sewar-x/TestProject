@@ -3,6 +3,12 @@
 
 * Project link:  [`http://www.sewar.top/sewar/index.html`](http://www.sewar.top/sewar/index.html)
 
+  * If the website is temporarily unable to access, please visit the IP address： [`https://101.132.131.230/sewar/index.html`](https://101.132.131.230/sewar/index.html)
+
+  * tip: The project is designed as the mobile，use the F12 to open the debugging tool to view the mobile display style
+
+    ![image-20210719001603036](./src/images/tip.png)
+
 * Home Page only Show a button，Click the button to enter the Exponents page
 
   ![image-20210718120337228](./src/images/homePage.png)
